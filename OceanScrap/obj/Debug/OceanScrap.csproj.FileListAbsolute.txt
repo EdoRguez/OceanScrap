@@ -1,0 +1,14 @@
+C:\Users\arman\OneDrive\Documentos\Escritorio\Eduardo Rodriguez\OceanScrap\OceanScrap\bin\Debug\OceanScrap.exe.config
+C:\Users\arman\OneDrive\Documentos\Escritorio\Eduardo Rodriguez\OceanScrap\OceanScrap\bin\Debug\OceanScrap.exe
+C:\Users\arman\OneDrive\Documentos\Escritorio\Eduardo Rodriguez\OceanScrap\OceanScrap\bin\Debug\OceanScrap.pdb
+C:\Users\arman\OneDrive\Documentos\Escritorio\Eduardo Rodriguez\OceanScrap\OceanScrap\bin\Debug\HtmlAgilityPack.dll
+C:\Users\arman\OneDrive\Documentos\Escritorio\Eduardo Rodriguez\OceanScrap\OceanScrap\bin\Debug\HtmlAgilityPack.pdb
+C:\Users\arman\OneDrive\Documentos\Escritorio\Eduardo Rodriguez\OceanScrap\OceanScrap\bin\Debug\HtmlAgilityPack.xml
+C:\Users\arman\OneDrive\Documentos\Escritorio\Eduardo Rodriguez\OceanScrap\OceanScrap\obj\Debug\OceanScrap.csprojAssemblyReference.cache
+C:\Users\arman\OneDrive\Documentos\Escritorio\Eduardo Rodriguez\OceanScrap\OceanScrap\obj\Debug\OceanScrap.Form1.resources
+C:\Users\arman\OneDrive\Documentos\Escritorio\Eduardo Rodriguez\OceanScrap\OceanScrap\obj\Debug\OceanScrap.Properties.Resources.resources
+C:\Users\arman\OneDrive\Documentos\Escritorio\Eduardo Rodriguez\OceanScrap\OceanScrap\obj\Debug\OceanScrap.csproj.GenerateResource.cache
+C:\Users\arman\OneDrive\Documentos\Escritorio\Eduardo Rodriguez\OceanScrap\OceanScrap\obj\Debug\OceanScrap.csproj.CoreCompileInputs.cache
+C:\Users\arman\OneDrive\Documentos\Escritorio\Eduardo Rodriguez\OceanScrap\OceanScrap\obj\Debug\OceanScrap.csproj.CopyComplete
+C:\Users\arman\OneDrive\Documentos\Escritorio\Eduardo Rodriguez\OceanScrap\OceanScrap\obj\Debug\OceanScrap.exe
+C:\Users\arman\OneDrive\Documentos\Escritorio\Eduardo Rodriguez\OceanScrap\OceanScrap\obj\Debug\OceanScrap.pdb
