@@ -1,5 +1,4 @@
-﻿using HtmlAgilityPack;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -30,32 +29,29 @@ namespace OceanScrap
 
         private void buttonStart_Click(object sender, EventArgs e)
         {
-            Port myPort = new Port();
-
-            var html = @"https://www.marinetraffic.com/en/ais/details/ports/1";
-            HtmlWeb web = new HtmlWeb();
-            var htmlDoc = web.Load(html);
-
-            var nodeName = htmlDoc.DocumentNode.SelectSingleNode("//h1");
-            myPort.getPortName(nodeName.InnerText);
+            int portStart = int.Parse(numericUpDownFrom.Value.ToString());
+            int portEnd = int.Parse(numericUpDownTo.Value.ToString());
 
 
-            var nodeLocode = htmlDoc.DocumentNode.SelectNodes("//b");
-            myPort.Locode = nodeLocode[2].InnerText;
+            for(var i = portStart; i <= portEnd; i++ )
+            {
+                toolStripStatusLabel1.Text = "Port: " + i.ToString();
 
+                var html = @"https://www.marinetraffic.com/en/ais/details/ports/" + i.ToString();
 
-            var nodeCountry = htmlDoc.DocumentNode.SelectNodes("//span[contains(@class, 'font-120')]");
-            myPort.Country = nodeCountry[0].InnerText;
+                Port myPort = new Port(html);
+                myPort.Id = i;
 
-            var nodeCoordenates = htmlDoc.DocumentNode.SelectNodes("//b");
-            myPort.getCoordenates(nodeCoordenates[0].InnerText);
+                if(myPort.Scrapped)
+                {
+                    dataGridViewElements.Rows.Add(myPort.Id,myPort.Name, myPort.Locode, myPort.Country, myPort.Latitude, myPort.Longitude, myPort.Link);
+                }
+                else
+                {
+                    listBoxErrors.Items.Add("No data port Nº " + i.ToString());
+                }
+            }
 
-            textBoxPrueba.Text = myPort.Latitude + " " + myPort.Longitude;
-            //textBoxPrueba.Text = myPort.Latitude + " " + myPort.Longitude;
-
-
-
-            //textBoxPrueba.Text = node.Name + " ---- " + node.OuterHtml + "||||||| " + node.InnerText;
         }
 
         

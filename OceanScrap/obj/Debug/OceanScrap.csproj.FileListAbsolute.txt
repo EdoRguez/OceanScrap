@@ -12,3 +12,17 @@ C:\Users\arman\OneDrive\Documentos\Escritorio\Eduardo Rodriguez\OceanScrap\Ocean
 C:\Users\arman\OneDrive\Documentos\Escritorio\Eduardo Rodriguez\OceanScrap\OceanScrap\obj\Debug\OceanScrap.csproj.CopyComplete
 C:\Users\arman\OneDrive\Documentos\Escritorio\Eduardo Rodriguez\OceanScrap\OceanScrap\obj\Debug\OceanScrap.exe
 C:\Users\arman\OneDrive\Documentos\Escritorio\Eduardo Rodriguez\OceanScrap\OceanScrap\obj\Debug\OceanScrap.pdb
+C:\Users\edro9\Documents\Visual Studio 2017\Projects\OceanScrap\OceanScrap\bin\Debug\OceanScrap.exe.config
+C:\Users\edro9\Documents\Visual Studio 2017\Projects\OceanScrap\OceanScrap\bin\Debug\OceanScrap.exe
+C:\Users\edro9\Documents\Visual Studio 2017\Projects\OceanScrap\OceanScrap\bin\Debug\OceanScrap.pdb
+C:\Users\edro9\Documents\Visual Studio 2017\Projects\OceanScrap\OceanScrap\bin\Debug\HtmlAgilityPack.dll
+C:\Users\edro9\Documents\Visual Studio 2017\Projects\OceanScrap\OceanScrap\bin\Debug\HtmlAgilityPack.pdb
+C:\Users\edro9\Documents\Visual Studio 2017\Projects\OceanScrap\OceanScrap\bin\Debug\HtmlAgilityPack.xml
+C:\Users\edro9\Documents\Visual Studio 2017\Projects\OceanScrap\OceanScrap\obj\Debug\OceanScrap.csprojAssemblyReference.cache
+C:\Users\edro9\Documents\Visual Studio 2017\Projects\OceanScrap\OceanScrap\obj\Debug\OceanScrap.Form1.resources
+C:\Users\edro9\Documents\Visual Studio 2017\Projects\OceanScrap\OceanScrap\obj\Debug\OceanScrap.Properties.Resources.resources
+C:\Users\edro9\Documents\Visual Studio 2017\Projects\OceanScrap\OceanScrap\obj\Debug\OceanScrap.csproj.GenerateResource.cache
+C:\Users\edro9\Documents\Visual Studio 2017\Projects\OceanScrap\OceanScrap\obj\Debug\OceanScrap.csproj.CoreCompileInputs.cache
+C:\Users\edro9\Documents\Visual Studio 2017\Projects\OceanScrap\OceanScrap\obj\Debug\OceanScrap.csproj.CopyComplete
+C:\Users\edro9\Documents\Visual Studio 2017\Projects\OceanScrap\OceanScrap\obj\Debug\OceanScrap.exe
+C:\Users\edro9\Documents\Visual Studio 2017\Projects\OceanScrap\OceanScrap\obj\Debug\OceanScrap.pdb
