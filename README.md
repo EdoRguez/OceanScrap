@@ -19,7 +19,7 @@ Clone or fork OceanScrap project and open it using Visual Studio
 
 * [Windows Forms](https://docs.microsoft.com/en-us/dotnet/framework/winforms/) - The framework used
 * [Html Agility Pack](https://html-agility-pack.net/) - Library used to read the HTML page
-
+* [SQL Server](https://www.microsoft.com/es-es/sql-server/sql-server-2019) - Database
 
 ## Authors
 
