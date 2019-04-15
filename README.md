@@ -2,6 +2,10 @@
 
 OcenScrap is a project where all ports around the world were scrapped in a JSON file and the project source code.
 
+### Prerequisites
+
+* Windows OS
+
 ## Getting Started
 
 Clone or fork OceanScrap project and open it using Visual Studio
