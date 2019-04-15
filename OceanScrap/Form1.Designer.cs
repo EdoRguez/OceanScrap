@@ -34,11 +34,6 @@
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
             this.dataGridViewElements = new System.Windows.Forms.DataGridView();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.numericUpDownFrom = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDownTo = new System.Windows.Forms.NumericUpDown();
-            this.listBoxErrors = new System.Windows.Forms.ListBox();
             this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.PortName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Locode = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -46,6 +41,13 @@
             this.Latitude = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Longitude = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Link = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.numericUpDownFrom = new System.Windows.Forms.NumericUpDown();
+            this.numericUpDownTo = new System.Windows.Forms.NumericUpDown();
+            this.listBoxErrors = new System.Windows.Forms.ListBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
             this.statusStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewElements)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownFrom)).BeginInit();
@@ -65,7 +67,7 @@
             // 
             // buttonStart
             // 
-            this.buttonStart.Location = new System.Drawing.Point(604, 69);
+            this.buttonStart.Location = new System.Drawing.Point(441, 54);
             this.buttonStart.Margin = new System.Windows.Forms.Padding(2);
             this.buttonStart.Name = "buttonStart";
             this.buttonStart.Size = new System.Drawing.Size(82, 43);
@@ -76,7 +78,7 @@
             // 
             // buttonStop
             // 
-            this.buttonStop.Location = new System.Drawing.Point(604, 124);
+            this.buttonStop.Location = new System.Drawing.Point(527, 54);
             this.buttonStop.Margin = new System.Windows.Forms.Padding(2);
             this.buttonStop.Name = "buttonStop";
             this.buttonStop.Size = new System.Drawing.Size(82, 43);
@@ -89,10 +91,10 @@
             this.statusStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripStatusLabel1});
-            this.statusStrip1.Location = new System.Drawing.Point(0, 336);
+            this.statusStrip1.Location = new System.Drawing.Point(0, 375);
             this.statusStrip1.Name = "statusStrip1";
             this.statusStrip1.Padding = new System.Windows.Forms.Padding(1, 0, 10, 0);
-            this.statusStrip1.Size = new System.Drawing.Size(982, 22);
+            this.statusStrip1.Size = new System.Drawing.Size(736, 22);
             this.statusStrip1.TabIndex = 3;
             this.statusStrip1.Text = "statusStrip1";
             // 
@@ -118,63 +120,13 @@
             this.Latitude,
             this.Longitude,
             this.Link});
-            this.dataGridViewElements.Location = new System.Drawing.Point(9, 69);
+            this.dataGridViewElements.Location = new System.Drawing.Point(11, 141);
             this.dataGridViewElements.Margin = new System.Windows.Forms.Padding(2);
             this.dataGridViewElements.Name = "dataGridViewElements";
             this.dataGridViewElements.ReadOnly = true;
             this.dataGridViewElements.RowTemplate.Height = 24;
-            this.dataGridViewElements.Size = new System.Drawing.Size(574, 250);
+            this.dataGridViewElements.Size = new System.Drawing.Size(574, 224);
             this.dataGridViewElements.TabIndex = 4;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(766, 50);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(33, 13);
-            this.label2.TabIndex = 8;
-            this.label2.Text = "From:";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(766, 96);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(23, 13);
-            this.label3.TabIndex = 9;
-            this.label3.Text = "To:";
-            // 
-            // numericUpDownFrom
-            // 
-            this.numericUpDownFrom.Location = new System.Drawing.Point(769, 66);
-            this.numericUpDownFrom.Name = "numericUpDownFrom";
-            this.numericUpDownFrom.Size = new System.Drawing.Size(120, 20);
-            this.numericUpDownFrom.TabIndex = 10;
-            // 
-            // numericUpDownTo
-            // 
-            this.numericUpDownTo.Location = new System.Drawing.Point(769, 124);
-            this.numericUpDownTo.Minimum = new decimal(new int[] {
-            10,
-            0,
-            0,
-            0});
-            this.numericUpDownTo.Name = "numericUpDownTo";
-            this.numericUpDownTo.Size = new System.Drawing.Size(120, 20);
-            this.numericUpDownTo.TabIndex = 11;
-            this.numericUpDownTo.Value = new decimal(new int[] {
-            10,
-            0,
-            0,
-            0});
-            // 
-            // listBoxErrors
-            // 
-            this.listBoxErrors.FormattingEnabled = true;
-            this.listBoxErrors.Location = new System.Drawing.Point(604, 190);
-            this.listBoxErrors.Name = "listBoxErrors";
-            this.listBoxErrors.Size = new System.Drawing.Size(136, 121);
-            this.listBoxErrors.TabIndex = 12;
             // 
             // Id
             // 
@@ -218,11 +170,83 @@
             this.Link.Name = "Link";
             this.Link.ReadOnly = true;
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(12, 69);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(33, 13);
+            this.label2.TabIndex = 8;
+            this.label2.Text = "From:";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(208, 69);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(23, 13);
+            this.label3.TabIndex = 9;
+            this.label3.Text = "To:";
+            // 
+            // numericUpDownFrom
+            // 
+            this.numericUpDownFrom.Location = new System.Drawing.Point(51, 67);
+            this.numericUpDownFrom.Name = "numericUpDownFrom";
+            this.numericUpDownFrom.Size = new System.Drawing.Size(120, 20);
+            this.numericUpDownFrom.TabIndex = 10;
+            // 
+            // numericUpDownTo
+            // 
+            this.numericUpDownTo.Location = new System.Drawing.Point(247, 69);
+            this.numericUpDownTo.Minimum = new decimal(new int[] {
+            10,
+            0,
+            0,
+            0});
+            this.numericUpDownTo.Name = "numericUpDownTo";
+            this.numericUpDownTo.Size = new System.Drawing.Size(120, 20);
+            this.numericUpDownTo.TabIndex = 11;
+            this.numericUpDownTo.Value = new decimal(new int[] {
+            10,
+            0,
+            0,
+            0});
+            // 
+            // listBoxErrors
+            // 
+            this.listBoxErrors.FormattingEnabled = true;
+            this.listBoxErrors.Location = new System.Drawing.Point(590, 139);
+            this.listBoxErrors.Name = "listBoxErrors";
+            this.listBoxErrors.Size = new System.Drawing.Size(136, 225);
+            this.listBoxErrors.TabIndex = 12;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(194, 106);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(98, 16);
+            this.label4.TabIndex = 13;
+            this.label4.Text = "Scrapped data";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(613, 106);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(80, 16);
+            this.label5.TabIndex = 14;
+            this.label5.Text = "List of errors";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(982, 358);
+            this.ClientSize = new System.Drawing.Size(736, 397);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.label4);
             this.Controls.Add(this.listBoxErrors);
             this.Controls.Add(this.numericUpDownTo);
             this.Controls.Add(this.numericUpDownFrom);
@@ -267,6 +291,8 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Latitude;
         private System.Windows.Forms.DataGridViewTextBoxColumn Longitude;
         private System.Windows.Forms.DataGridViewTextBoxColumn Link;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label5;
     }
 }
 
