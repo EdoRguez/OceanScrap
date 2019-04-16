@@ -1,0 +1,22 @@
+[
+  {
+    "Id": 9,
+    "Name": "SOUDA",
+    "Locode": "GRSDH",
+    "Country": "Greece",
+    "Latitude": 35.49056,
+    "Longitude": 24.07475,
+    "Link": "https://www.marinetraffic.com/en/ais/details/ports/9",
+    "Scrapped": false
+  },
+  {
+    "Id": 10,
+    "Name": "RETHYMNO",
+    "Locode": "GRRET",
+    "Country": "Greece",
+    "Latitude": 35.37063,
+    "Longitude": 24.48055,
+    "Link": "https://www.marinetraffic.com/en/ais/details/ports/10",
+    "Scrapped": false
+  }
+]

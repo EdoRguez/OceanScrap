@@ -9,6 +9,7 @@ using System.Drawing;
 using System.IO;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -66,9 +67,6 @@ namespace OceanScrap
 
                     if (checkBoxSave.Checked)
                     {
-
-
-
                         string sqlQuery = "INSERT INTO Port(Id, PortName, Locode, Country, Latitude, Longitude, Link) VALUES(@Id, @PortName, @Locode, @Country, @Latitude, @Longitude, @Link)";
                         comando = new SqlCommand(sqlQuery, sqlDb);
                         comando.Parameters.AddWithValue("@Id", myPort.Id);
@@ -127,7 +125,7 @@ namespace OceanScrap
                 Port dataGridPort = new Port()
                 {
                     Id = int.Parse(row.Cells["Id"].Value.ToString()),
-                    Name = row.Cells["File"].Value.ToString(),
+                    Name = row.Cells["PortName"].Value.ToString(),
                     Locode = row.Cells["Locode"].Value.ToString(),
                     Country = row.Cells["Country"].Value.ToString(),
                     Latitude = float.Parse(row.Cells["Latitude"].Value.ToString()),
@@ -138,13 +136,16 @@ namespace OceanScrap
             }
 
             //Write out JSON file
-            //string export = JsonConvert.SerializeObject(new { types = portsList }, Formatting.Indented);
-            //File.WriteAllText(@Settings.Default.folder + "\\" + "upload" + "\\" + "export.json", export);
+            var jsonFormat = JsonConvert.SerializeObject(portsList, Formatting.Indented);
+            // File rout OceanScrap\OceanScrap\bin\Debug
+            System.IO.File.WriteAllText("ports.json", jsonFormat);
 
-            textBoxPrueba.Text = portsList[1].ToString();
+            MessageBox.Show("Your JSON file has been downloaded successfully \n Root:  ~OceanScrap\\OceanScrap\\bin\\Debug", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
 
-            //string output = JsonConvert.SerializeObject(dataGridViewElements.DataSource);
-            //System.IO.File.WriteAllText("json.json", output);
+        private void ButtonStop_Click(object sender, EventArgs e)
+        {
+            Environment.Exit(1);
         }
     }
 }
