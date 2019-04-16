@@ -26,3 +26,6 @@ C:\Users\edro9\Documents\Visual Studio 2017\Projects\OceanScrap\OceanScrap\obj\D
 C:\Users\edro9\Documents\Visual Studio 2017\Projects\OceanScrap\OceanScrap\obj\Debug\OceanScrap.csproj.CopyComplete
 C:\Users\edro9\Documents\Visual Studio 2017\Projects\OceanScrap\OceanScrap\obj\Debug\OceanScrap.exe
 C:\Users\edro9\Documents\Visual Studio 2017\Projects\OceanScrap\OceanScrap\obj\Debug\OceanScrap.pdb
+C:\Users\edro9\Documents\Visual Studio 2017\Projects\OceanScrap\OceanScrap\bin\Debug\Newtonsoft.Json.dll
+C:\Users\edro9\Documents\Visual Studio 2017\Projects\OceanScrap\OceanScrap\bin\Debug\Newtonsoft.Json.pdb
+C:\Users\edro9\Documents\Visual Studio 2017\Projects\OceanScrap\OceanScrap\bin\Debug\Newtonsoft.Json.xml

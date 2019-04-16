@@ -48,17 +48,22 @@
             this.listBoxErrors = new System.Windows.Forms.ListBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
+            this.buttonDownload = new System.Windows.Forms.Button();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.checkBoxSave = new System.Windows.Forms.CheckBox();
+            this.textBoxPrueba = new System.Windows.Forms.TextBox();
             this.statusStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewElements)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownFrom)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownTo)).BeginInit();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(254, 26);
+            this.label1.Location = new System.Drawing.Point(307, 27);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(113, 20);
@@ -67,7 +72,7 @@
             // 
             // buttonStart
             // 
-            this.buttonStart.Location = new System.Drawing.Point(441, 54);
+            this.buttonStart.Location = new System.Drawing.Point(402, 90);
             this.buttonStart.Margin = new System.Windows.Forms.Padding(2);
             this.buttonStart.Name = "buttonStart";
             this.buttonStart.Size = new System.Drawing.Size(82, 43);
@@ -78,7 +83,7 @@
             // 
             // buttonStop
             // 
-            this.buttonStop.Location = new System.Drawing.Point(527, 54);
+            this.buttonStop.Location = new System.Drawing.Point(488, 90);
             this.buttonStop.Margin = new System.Windows.Forms.Padding(2);
             this.buttonStop.Name = "buttonStop";
             this.buttonStop.Size = new System.Drawing.Size(82, 43);
@@ -91,7 +96,7 @@
             this.statusStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripStatusLabel1});
-            this.statusStrip1.Location = new System.Drawing.Point(0, 375);
+            this.statusStrip1.Location = new System.Drawing.Point(0, 454);
             this.statusStrip1.Name = "statusStrip1";
             this.statusStrip1.Padding = new System.Windows.Forms.Padding(1, 0, 10, 0);
             this.statusStrip1.Size = new System.Drawing.Size(736, 22);
@@ -120,7 +125,7 @@
             this.Latitude,
             this.Longitude,
             this.Link});
-            this.dataGridViewElements.Location = new System.Drawing.Point(11, 141);
+            this.dataGridViewElements.Location = new System.Drawing.Point(6, 218);
             this.dataGridViewElements.Margin = new System.Windows.Forms.Padding(2);
             this.dataGridViewElements.Name = "dataGridViewElements";
             this.dataGridViewElements.ReadOnly = true;
@@ -173,7 +178,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(12, 69);
+            this.label2.Location = new System.Drawing.Point(12, 105);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(33, 13);
             this.label2.TabIndex = 8;
@@ -182,7 +187,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(208, 69);
+            this.label3.Location = new System.Drawing.Point(207, 105);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(23, 13);
             this.label3.TabIndex = 9;
@@ -190,14 +195,14 @@
             // 
             // numericUpDownFrom
             // 
-            this.numericUpDownFrom.Location = new System.Drawing.Point(51, 67);
+            this.numericUpDownFrom.Location = new System.Drawing.Point(51, 103);
             this.numericUpDownFrom.Name = "numericUpDownFrom";
             this.numericUpDownFrom.Size = new System.Drawing.Size(120, 20);
             this.numericUpDownFrom.TabIndex = 10;
             // 
             // numericUpDownTo
             // 
-            this.numericUpDownTo.Location = new System.Drawing.Point(247, 69);
+            this.numericUpDownTo.Location = new System.Drawing.Point(247, 103);
             this.numericUpDownTo.Minimum = new decimal(new int[] {
             10,
             0,
@@ -215,7 +220,7 @@
             // listBoxErrors
             // 
             this.listBoxErrors.FormattingEnabled = true;
-            this.listBoxErrors.Location = new System.Drawing.Point(590, 139);
+            this.listBoxErrors.Location = new System.Drawing.Point(585, 216);
             this.listBoxErrors.Name = "listBoxErrors";
             this.listBoxErrors.Size = new System.Drawing.Size(136, 225);
             this.listBoxErrors.TabIndex = 12;
@@ -224,7 +229,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(194, 106);
+            this.label4.Location = new System.Drawing.Point(244, 183);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(98, 16);
             this.label4.TabIndex = 13;
@@ -234,17 +239,57 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(613, 106);
+            this.label5.Location = new System.Drawing.Point(613, 183);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(80, 16);
             this.label5.TabIndex = 14;
             this.label5.Text = "List of errors";
             // 
+            // buttonDownload
+            // 
+            this.buttonDownload.Location = new System.Drawing.Point(577, 90);
+            this.buttonDownload.Name = "buttonDownload";
+            this.buttonDownload.Size = new System.Drawing.Size(116, 43);
+            this.buttonDownload.TabIndex = 15;
+            this.buttonDownload.Text = "Download JSON";
+            this.buttonDownload.UseVisualStyleBackColor = true;
+            this.buttonDownload.Click += new System.EventHandler(this.buttonDownload_Click);
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.checkBoxSave);
+            this.groupBox1.Location = new System.Drawing.Point(31, 138);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(99, 60);
+            this.groupBox1.TabIndex = 16;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Save to DB";
+            // 
+            // checkBoxSave
+            // 
+            this.checkBoxSave.AutoSize = true;
+            this.checkBoxSave.Location = new System.Drawing.Point(20, 28);
+            this.checkBoxSave.Name = "checkBoxSave";
+            this.checkBoxSave.Size = new System.Drawing.Size(51, 17);
+            this.checkBoxSave.TabIndex = 0;
+            this.checkBoxSave.Text = "Save";
+            this.checkBoxSave.UseVisualStyleBackColor = true;
+            // 
+            // textBoxPrueba
+            // 
+            this.textBoxPrueba.Location = new System.Drawing.Point(15, 50);
+            this.textBoxPrueba.Name = "textBoxPrueba";
+            this.textBoxPrueba.Size = new System.Drawing.Size(678, 20);
+            this.textBoxPrueba.TabIndex = 17;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(736, 397);
+            this.ClientSize = new System.Drawing.Size(736, 476);
+            this.Controls.Add(this.textBoxPrueba);
+            this.Controls.Add(this.groupBox1);
+            this.Controls.Add(this.buttonDownload);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.listBoxErrors);
@@ -266,6 +311,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewElements)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownFrom)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownTo)).EndInit();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -293,6 +340,10 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Link;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Button buttonDownload;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.CheckBox checkBoxSave;
+        private System.Windows.Forms.TextBox textBoxPrueba;
     }
 }
 

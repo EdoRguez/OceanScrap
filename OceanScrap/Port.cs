@@ -19,6 +19,7 @@ namespace OceanScrap
 
         public bool Scrapped { get; set; }
 
+        public Port() {  }
 
         public Port(string html)
         {

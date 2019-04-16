@@ -1,9 +1,12 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using OceanScrap.Properties;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -13,14 +16,15 @@ namespace OceanScrap
 {
     public partial class Form1 : Form
     {
-        string ConnectionString = System.Configuration.ConfigurationManager.ConnectionStrings["OceanScrap.Properties.Settings.ocean_connection"].ConnectionString;
-        SqlConnection sqlConexion;
+        string dbString = System.Configuration.ConfigurationManager.ConnectionStrings["OceanScrap.Properties.Settings.ocean_connection"].ConnectionString;
+        SqlConnection sqlDb;
         SqlCommand comando;
 
 
         public Form1()
         {
             InitializeComponent();
+            sqlDb = new SqlConnection(dbString);
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -41,12 +45,12 @@ namespace OceanScrap
             dataGridViewElements.Rows.Clear();
             listBoxErrors.Items.Clear();
 
-            sqlConexion.Open();
-            string sqlQuery = "INSERT INTO Ports(Id, Name, Locode, Country, Latitude, Longitude, Link) VALUES(@Id, @Name, @Locode, @Country, @Latitude, @Longitude, @Link)";
-            comando = new SqlCommand(sqlQuery, sqlConexion);
+            sqlDb.Open();
 
             for (var i = portStart; i <= portEnd; i++ )
             {
+                Application.DoEvents();
+
                 toolStripStatusLabel1.Text = "Scrapping..";
 
                 var html = @"https://www.marinetraffic.com/en/ais/details/ports/" + i.ToString();
@@ -60,49 +64,44 @@ namespace OceanScrap
 
                     dataGridViewElements.Rows.Add(myPort.Id,myPort.Name, myPort.Locode, myPort.Country, myPort.Latitude, myPort.Longitude, myPort.Link);
 
-
-                    comando.Parameters.AddWithValue("@Id", myPort.Id);
-                    comando.Parameters.AddWithValue("@Name", myPort.Name);
-                    comando.Parameters.AddWithValue("@Locode", myPort.Locode);
-                    comando.Parameters.AddWithValue("@Country", myPort.Country);
-                    comando.Parameters.AddWithValue("@Latitude", myPort.Latitude);
-                    comando.Parameters.AddWithValue("@Longitude", myPort.Longitude);
-                    comando.Parameters.AddWithValue("@Link", myPort.Link);
-
-                    try
+                    if (checkBoxSave.Checked)
                     {
-                        comando.ExecuteNonQuery();
-                        sqlQuery = "SELECT @@IDENTITY";
-                        comando = new SqlCommand(sqlQuery, sqlConexion);
-                        var ultimoId = Convert.ToInt32(comando.ExecuteScalar());
 
-                        MessageBox.Show("Los datos han sido ingresados satisfactoriamente", "Editar", MessageBoxButtons.OK);
-                        this.DialogResult = DialogResult.OK;
-                        Dispose();
 
-                    }
-                    catch (SqlException ex)
-                    {
-                        //tran.Rollback();
 
-                        if (ex.Number == 2627)
+                        string sqlQuery = "INSERT INTO Port(Id, PortName, Locode, Country, Latitude, Longitude, Link) VALUES(@Id, @PortName, @Locode, @Country, @Latitude, @Longitude, @Link)";
+                        comando = new SqlCommand(sqlQuery, sqlDb);
+                        comando.Parameters.AddWithValue("@Id", myPort.Id);
+                        comando.Parameters.AddWithValue("@PortName", myPort.Name);
+                        comando.Parameters.AddWithValue("@Locode", myPort.Locode);
+                        comando.Parameters.AddWithValue("@Country", myPort.Country);
+                        comando.Parameters.AddWithValue("@Latitude", myPort.Latitude);
+                        comando.Parameters.AddWithValue("@Longitude", myPort.Longitude);
+                        comando.Parameters.AddWithValue("@Link", myPort.Link);
+
+                        try
                         {
-                            MessageBox.Show("Algunos datos están duplicados en la base de datos", "Error", MessageBoxButtons.OK);
+                            comando.ExecuteNonQuery();
+                            sqlQuery = "SELECT @@IDENTITY";
+                            comando = new SqlCommand(sqlQuery, sqlDb);
+
                         }
-                        else
+                        catch (SqlException ex)
                         {
-                            MessageBox.Show("Otro error de base de datos " + ex.ToString());
+                            if (ex.Number == 2627)
+                            {
+                                MessageBox.Show("Algunos datos están duplicados en la base de datos", "Error", MessageBoxButtons.OK);
+                            }
+                            else
+                            {
+                                MessageBox.Show("Otro error de base de datos " + ex.ToString());
+                            }
+                        }
+                        catch (Exception error)
+                        {
+                            MessageBox.Show("Ha sucedido un error: " + error.ToString());
                         }
                     }
-                    catch (Exception error)
-                    {
-                        MessageBox.Show("Ha sucedido un error: " + error.ToString());
-
-                    }
-
-
-
-
                 }
                 else
                 {
@@ -115,10 +114,37 @@ namespace OceanScrap
 
             toolStripStatusLabel1.Text = "Scrapping finished";
 
-            sqlConexion.Close();
+            sqlDb.Close();
 
         }
 
-        
+        private void buttonDownload_Click(object sender, EventArgs e)
+        {
+            var portsList = new List<Port>();
+
+            foreach (DataGridViewRow row in dataGridViewElements.Rows)
+            {
+                Port dataGridPort = new Port()
+                {
+                    Id = int.Parse(row.Cells["Id"].Value.ToString()),
+                    Name = row.Cells["File"].Value.ToString(),
+                    Locode = row.Cells["Locode"].Value.ToString(),
+                    Country = row.Cells["Country"].Value.ToString(),
+                    Latitude = float.Parse(row.Cells["Latitude"].Value.ToString()),
+                    Longitude = float.Parse(row.Cells["Longitude"].Value.ToString()),
+                    Link = row.Cells["Link"].Value.ToString()
+                };
+                portsList.Add(dataGridPort);
+            }
+
+            //Write out JSON file
+            //string export = JsonConvert.SerializeObject(new { types = portsList }, Formatting.Indented);
+            //File.WriteAllText(@Settings.Default.folder + "\\" + "upload" + "\\" + "export.json", export);
+
+            textBoxPrueba.Text = portsList[1].ToString();
+
+            //string output = JsonConvert.SerializeObject(dataGridViewElements.DataSource);
+            //System.IO.File.WriteAllText("json.json", output);
+        }
     }
 }

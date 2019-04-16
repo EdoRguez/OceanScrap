@@ -23,15 +23,13 @@ namespace OceanScrap.Properties {
             }
         }
         
-        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
         [global::System.Configuration.DefaultSettingValueAttribute("Server=DESKTOP-RIDEG5H;Database=prueba;Trusted_Connection=True;")]
         public string ocean_connection {
             get {
                 return ((string)(this["ocean_connection"]));
-            }
-            set {
-                this["ocean_connection"] = value;
             }
         }
     }
