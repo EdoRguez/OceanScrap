@@ -4,16 +4,17 @@ OcenScrap is a project where all ports around the world were scrapped in a JSON 
 
 ### Prerequisites
 
-* Windows OS
+* Windows OS.
 
 ## Getting Started
 
-Clone or fork OceanScrap project and open it using Visual Studio
+Clone or fork OceanScrap project and open it using Visual Studio.
 
 ### Installing
 
-1. Open Visual Studio
-2. Select the project source
+1. Open Visual Studio.
+2. Select the project source.
+3. Open Project/Properties/Settings to configure the connection string to your data base.
 
 ## Built With
 
