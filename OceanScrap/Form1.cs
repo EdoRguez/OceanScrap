@@ -80,8 +80,8 @@ namespace OceanScrap
                         try
                         {
                             comando.ExecuteNonQuery();
-                            sqlQuery = "SELECT @@IDENTITY";
-                            comando = new SqlCommand(sqlQuery, sqlDb);
+                            //sqlQuery = "SELECT @@IDENTITY";
+                            //comando = new SqlCommand(sqlQuery, sqlDb);
 
                         }
                         catch (SqlException ex)
